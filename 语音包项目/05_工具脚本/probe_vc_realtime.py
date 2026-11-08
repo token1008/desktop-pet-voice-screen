@@ -2,21 +2,47 @@
 """qwen3-tts-vc-realtime 合成探针（WS SpeechSynthesizer + 复刻音色）。
 
 用法: python probe_vc_realtime.py [model] [voice] [text]
+可选: 设置 BAILIAN_WS_URL 覆盖 WebSocket 端点。
 """
+import ipaddress
 import json
 import os
 import sys
 from pathlib import Path
+from urllib.parse import urlparse
 
-PLUGIN_MCP_DIR = Path(r"C:\Users\a1575\.zcode\cli\plugins\cache\fufu-local\bailian-voice\0.6.1\mcp")
-sys.path.insert(0, str(PLUGIN_MCP_DIR))
-import server  # noqa: E402  workspace ws 端点
 import dashscope
 from dashscope.audio.tts_v2 import SpeechSynthesizer, AudioFormat
 
 KEY = os.environ.get("BAILIAN_API_KEY") or Path(__file__).with_name("api_key_new.txt").read_text(encoding="utf-8").strip()
 dashscope.api_key = KEY
-dashscope.base_websocket_api_url = server.CFG["websocket_url"]
+
+WS_URL = os.environ.get("BAILIAN_WS_URL", "wss://dashscope.aliyuncs.com/api-ws/v1/inference")
+
+
+def _safe_ws_url(url):
+    """仅允许 ws/wss，拒绝 localhost、环回、私有和保留地址。"""
+    p = urlparse(url)
+    if p.scheme not in ("ws", "wss"):
+        raise SystemExit("仅允许 ws/wss WebSocket URL")
+    host = (p.hostname or "").strip().lower()
+    if not host:
+        raise SystemExit("URL 缺少 host")
+    if host in ("localhost", "localhost.localdomain"):
+        raise SystemExit("拒绝 localhost")
+    try:
+        ip = ipaddress.ip_address(host)
+    except ValueError:
+        ip = None
+    if ip is not None and (
+        ip.is_loopback or ip.is_private or ip.is_reserved
+        or ip.is_link_local or ip.is_multicast or ip.is_unspecified
+    ):
+        raise SystemExit("拒绝环回/私有/保留地址")
+    return url
+
+
+dashscope.base_websocket_api_url = _safe_ws_url(WS_URL)
 OUT = Path(r"D:\桌宠\语音包项目\03_合成音频\probe_vc.wav")
 
 
