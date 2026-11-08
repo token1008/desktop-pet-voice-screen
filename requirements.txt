@@ -1,5 +1,5 @@
 # 核心依赖（表情取模 / 语音词表 / 百炼接口）
-Pillow
+pillow
 openpyxl
 requests
 dashscope
