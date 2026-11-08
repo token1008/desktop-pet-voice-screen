@@ -7,6 +7,7 @@
 import ipaddress
 import json
 import os
+import re
 import sys
 from pathlib import Path
 from urllib.parse import urlparse
@@ -74,7 +75,18 @@ def probe(model, voice, text):
 
 
 if __name__ == "__main__":
-    model = sys.argv[1] if len(sys.argv) > 1 else "qwen3-tts-vc-realtime"
-    voice = sys.argv[2] if len(sys.argv) > 2 else "qwen-tts-vc-furinareal-voice-20261107212733988-d4a2"
-    text = sys.argv[3] if len(sys.argv) > 3 else "看好了！优雅，永不过时！"
+    def _clean_arg(value, name, max_len=300):
+        value = value.strip()
+        if not value or len(value) > max_len:
+            raise SystemExit(f"{name} 参数为空或过长")
+        if name in ("model", "voice"):
+            if not re.fullmatch(r"[A-Za-z0-9._-]+", value):
+                raise SystemExit(f"{name} 仅允许字母、数字、点、下划线、连字符")
+        elif any(ord(c) < 32 for c in value):
+            raise SystemExit("text 含控制字符")
+        return value
+
+    model = _clean_arg(sys.argv[1] if len(sys.argv) > 1 else "qwen3-tts-vc-realtime", "model")
+    voice = _clean_arg(sys.argv[2] if len(sys.argv) > 2 else "qwen-tts-vc-furinareal-voice-20261107212733988-d4a2", "voice")
+    text = _clean_arg(sys.argv[3] if len(sys.argv) > 3 else "看好了！优雅，永不过时！", "text", max_len=500)
     print(json.dumps(probe(model, voice, text), ensure_ascii=False))
