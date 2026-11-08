@@ -1,0 +1,30 @@
+[
+ {
+  "id": "furina_ww",
+  "ok": true,
+  "file": "D:\\桌宠\\语音包项目\\03_合成音频\\芙宁娜包\\batch\\furina_ww_WW.wav",
+  "bytes": 124160,
+  "sr": 32000
+ },
+ {
+  "id": "furina_boot",
+  "ok": true,
+  "file": "D:\\桌宠\\语音包项目\\03_合成音频\\芙宁娜包\\batch\\furina_boot_boot.wav",
+  "bytes": 149760,
+  "sr": 32000
+ },
+ {
+  "id": "furina_timeout",
+  "ok": true,
+  "file": "D:\\桌宠\\语音包项目\\03_合成音频\\芙宁娜包\\batch\\furina_timeout_timeout.wav",
+  "bytes": 203520,
+  "sr": 32000
+ },
+ {
+  "id": "furina_exit",
+  "ok": true,
+  "file": "D:\\桌宠\\语音包项目\\03_合成音频\\芙宁娜包\\batch\\furina_exit_exit.wav",
+  "bytes": 160000,
+  "sr": 32000
+ }
+]

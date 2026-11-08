@@ -1,0 +1,12 @@
+# 核心依赖（表情取模 / 语音词表 / 百炼接口）
+Pillow
+openpyxl
+requests
+dashscope
+
+# 可选：字幕与参考音频转写（transcribe_*.py 使用）
+# faster-whisper
+# funasr
+
+# 注意：batch_tts.py 依赖本地安装的 GPT-SoVITS，
+# 不是 pip 包；请按 GPT-SoVITS 官方说明安装并修改脚本内 GPT_ROOT。

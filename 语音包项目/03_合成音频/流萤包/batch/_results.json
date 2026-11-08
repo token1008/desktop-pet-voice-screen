@@ -1,0 +1,30 @@
+[
+ {
+  "id": "firefly_ww",
+  "ok": true,
+  "file": "D:\\桌宠\\语音包项目\\03_合成音频\\流萤包\\batch\\firefly_ww_WW.wav",
+  "bytes": 203520,
+  "sr": 48000
+ },
+ {
+  "id": "firefly_boot",
+  "ok": true,
+  "file": "D:\\桌宠\\语音包项目\\03_合成音频\\流萤包\\batch\\firefly_boot_boot.wav",
+  "bytes": 218880,
+  "sr": 48000
+ },
+ {
+  "id": "firefly_timeout",
+  "ok": true,
+  "file": "D:\\桌宠\\语音包项目\\03_合成音频\\流萤包\\batch\\firefly_timeout_timeout.wav",
+  "bytes": 314880,
+  "sr": 48000
+ },
+ {
+  "id": "firefly_exit",
+  "ok": true,
+  "file": "D:\\桌宠\\语音包项目\\03_合成音频\\流萤包\\batch\\firefly_exit_exit.wav",
+  "bytes": 188160,
+  "sr": 48000
+ }
+]

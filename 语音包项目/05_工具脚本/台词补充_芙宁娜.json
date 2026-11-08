@@ -1,0 +1,10 @@
+{
+  "character": "芙宁娜补充",
+  "wake_word": "",
+  "lines": [
+    {"id": "furina_ww", "byte": null, "name": "WW", "text": "芙宁娜大人，任务完成"},
+    {"id": "furina_boot", "byte": null, "name": "boot", "text": "请说芙宁娜大人来唤醒我"},
+    {"id": "furina_timeout", "byte": null, "name": "timeout", "text": "哼，本大人先休息了，想我就喊我"},
+    {"id": "furina_exit", "byte": null, "name": "exit", "text": "好吧好吧，本大人先退场了"}
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "character": "测试",
+  "wake_word": "",
+  "lines": [
+    {"id": "furina_refA_test1", "byte": null, "name": "站立", "text": "看好了！优雅，永不过时！"},
+    {"id": "furina_refA_test2", "byte": null, "name": "打招呼", "text": "很高兴见到你，请多关照啦！"},
+    {"id": "firefly_ref_test1", "byte": null, "name": "站立", "text": "站好了，随时可以出发"},
+    {"id": "firefly_ref_test2", "byte": null, "name": "打招呼", "text": "你好呀，很高兴见到你"}
+  ]
+}

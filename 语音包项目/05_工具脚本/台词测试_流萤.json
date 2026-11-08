@@ -1,0 +1,8 @@
+{
+  "character": "测试",
+  "wake_word": "",
+  "lines": [
+    {"id": "ff_test1", "byte": null, "name": "站立", "text": "站好了，随时可以出发"},
+    {"id": "ff_test2", "byte": null, "name": "打招呼", "text": "你好呀，很高兴见到你"}
+  ]
+}

@@ -1,0 +1,12 @@
+[
+ {
+  "id": "test1",
+  "ok": false,
+  "err": "SoVITS V3/V4/V5 do not support reference-text-free mode; prompt_text cannot be empty"
+ },
+ {
+  "id": "test2",
+  "ok": false,
+  "err": "SoVITS V3/V4/V5 do not support reference-text-free mode; prompt_text cannot be empty"
+ }
+]

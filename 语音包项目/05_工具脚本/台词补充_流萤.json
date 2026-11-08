@@ -1,0 +1,10 @@
+{
+  "character": "流萤补充",
+  "wake_word": "",
+  "lines": [
+    {"id": "firefly_ww", "byte": null, "name": "WW", "text": "流萤大人，任务完成"},
+    {"id": "firefly_boot", "byte": null, "name": "boot", "text": "请说流萤大人来唤醒我"},
+    {"id": "firefly_timeout", "byte": null, "name": "timeout", "text": "那我先待机啦，需要时随时叫我"},
+    {"id": "firefly_exit", "byte": null, "name": "exit", "text": "好的，那我先走啦"}
+  ]
+}
