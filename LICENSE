@@ -19,11 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-注意：本许可证仅覆盖本仓库中由本项目作者新增的代码与文档。
-角色立绘、角色图标、原声样本、角色语音合成音频等素材的版权归
-米哈游 / HoYoverse 及相关权利人所有，不适用本许可证，仅限个人
-非商业使用。原作者的 STM32 固件与硬件工程采用 GPL-3.0，本仓库
-未直接分发其衍生 HEX 文件。
